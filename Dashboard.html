@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <style>
-      .main-window {
-        width: 400px;
-        height: 800px;
-        margin: 50px auto;
-        box-shadow: #000 0 0 10px;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 10px;
-        overflow: hidden;
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: white;
       }
     </style>
   </head>
   <body>
-    <div class="main-window">
+   
       <div
         style="
-          width: 440px;
-          height: 956px;
+          width: 1280px;
+          height: 720px;
           position: relative;
           background: white;
           overflow: hidden;
@@ -32,7 +31,7 @@
             width: 183px;
             height: 32px;
             left: 16px;
-            top: 112px;
+            top: 20px;
             position: absolute;
             justify-content: flex-start;
             align-items: flex-start;
@@ -65,6 +64,7 @@
                 font-weight: 500;
                 line-height: 19.6px;
                 word-wrap: break-word;
+                
               "
             >
               Main
@@ -131,89 +131,53 @@
             </div>
           </div>
         </div>
-        
+        <!--Top Tabs-->
         <div
           style="
-            width: 440px;
+            width: 200px;
             height: 63px;
             left: 0px;
-            top: 44px;
+            top: 0px;
             position: absolute;
           "
         >
           <div
             style="
-              left: 168px;
+              left: 350%;
               top: 14px;
               position: absolute;
+              transform: translateX(-50%);
               text-align: center;
               color: black;
               font-size: 20px;
               font-family: Inter;
               font-weight: 600;
               line-height: 28px;
-              word-wrap: break-word;
+              white-space: nowrap;
             "
           >
-            App name
+            Money Management System
           </div>
-          <div
-            style="
-              width: 28.16px;
-              height: 27px;
-              left: 18.77px;
-              top: 18px;
-              position: absolute;
-            "
-          >
-            <div
-              style="
-                width: 17.8px;
-                height: 1.8px;
-                left: 3.1px;
-                top: 5.1px;
-                position: absolute;
-                background: black;
-              "
-            ></div>
-            <div
-              style="
-                width: 14px;
-                height: 1.8px;
-                left: 3.1px;
-                top: 11.1px;
-                position: absolute;
-                background: black;
-              "
-            ></div>
-            <div
-              style="
-                width: 17.8px;
-                height: 1.8px;
-                left: 3.1px;
-                top: 17.1px;
-                position: absolute;
-                background: black;
-              "
-            ></div>
-          </div>
+          
         </div>
         <div
           style="
-            width: 424px;
-            height: 120px;
+            width: 400px;
+            height: 135px;
             left: 16px;
-            top: 168px;
+            top: 75px;
             position: absolute;
             justify-content: flex-start;
             align-items: flex-start;
-            gap: 12px;
-            display: inline-flex;
+            gap: 20px;
+            display: flex;
+            flex-wrap: nowrap;
           "
         >
+        <!--Current Balance Box-->
           <div
             style="
-              width: 144px;
+              width: 175px;
               height: 100px;
               padding: 16px;
               background: white;
@@ -266,12 +230,14 @@
               Remaining $700000
             </div>
           </div>
+          <!--Total Transactions Box-->
           <div
             style="
-              width: 144px;
+              width: 200px;
               height: 100px;
               padding: 16px;
               background: white;
+              
               box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
               overflow: hidden;
               border-radius: 8px;
@@ -323,13 +289,14 @@
             </div>
           </div>
         </div>
+        <!--Recents Box-->
         <div
           style="
-            width: 250px;
-            height: 50px;
+            width: 372px;
+            height: 300px;
             padding: 16px;
-            left: 16px;
-            top: 312px;
+            left: 14px;
+            top: 340px;
             position: absolute;
             background: white;
             overflow: hidden;
@@ -345,12 +312,12 @@
         >
           <div
             style="
-              width: 250px;
-              height: 50px;
+              width: 350px;
+              height: 280px;
               padding: 10px;
               left: 0px;
               top: 5px;
-              position: absolute;
+              position: relative;
               background: white;
               overflow: hidden;
               border-radius: 8px;
@@ -385,19 +352,132 @@
                 font-weight: 500;
                 line-height: 18px;
                 word-wrap: break-word;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
               "
             >
-              -- Potato Chips
+              <span>-- Potato Chips</span>
+              <span>$5.99</span>
+            </div>
+            <div
+              style="
+                width: 296px;
+                height: 21px;
+                color: black;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 500;
+                line-height: 18px;
+                word-wrap: break-word;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span>-- Coffee & Snacks</span>
+              <span>$12.50</span>
+            </div>
+            <div
+              style="
+                width: 296px;
+                height: 21px;
+                color: black;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 500;
+                line-height: 18px;
+                word-wrap: break-word;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span>-- Groceries</span>
+              <span>$45.30</span>
+            </div>
+            <div
+              style="
+                width: 296px;
+                height: 21px;
+                color: black;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 500;
+                line-height: 18px;
+                word-wrap: break-word;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span>-- Gas Station</span>
+              <span>$38.75</span>
+            </div>
+            <div
+              style="
+                width: 296px;
+                height: 21px;
+                color: black;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 500;
+                line-height: 18px;
+                word-wrap: break-word;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span>-- Restaurant Bill</span>
+              <span>$65.20</span>
+            </div>
+            <div
+              style="
+                width: 296px;
+                height: 21px;
+                color: black;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 500;
+                line-height: 18px;
+                word-wrap: break-word;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span>-- Movie Tickets</span>
+              <span>$28.00</span>
+            </div>
+            <div
+              style="
+                width: 296px;
+                height: 21px;
+                color: black;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 500;
+                line-height: 18px;
+                word-wrap: break-word;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span>-- Utilities Payment</span>
+              <span>$120.00</span>
             </div>
           </div>
         </div>
+        <!--Quick Add Menu-->
         <div
           style="
-            width: 335px;
-            height: 70px;
+            width: 370px;
+            height: 80px;
             padding: 16px;
             left: 16px;
-            top: 406px;
+            top: 220px;
             position: absolute;
             background: white;
             overflow: hidden;
@@ -612,7 +692,7 @@
             Quick Add Menu
           </div>
         </div>
-
+        <!--Plus Button-->
         <div
           data-show-focus-indicator="false"
           data-size="Default"
@@ -621,11 +701,12 @@
           style="
             width: 70px;
             height: 67px;
-            left: 315px;
-            top: 320px;
+            left: 51%;
+            transform: translateX(-50%);
+            bottom: 50px;
             position: absolute;
             background: white;
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 1px 4px 50px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             border-radius: 16px;
             justify-content: center;
@@ -674,6 +755,6 @@
           </div>
         </div>
       </div>
-    </div>
+    
   </body>
 </html>
