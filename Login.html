@@ -1,89 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <style>
-      body {
-        background-image: url("https://images.unsplash.com/photo-1710166755608-58b3d62db3a8?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page with Features - Light Theme</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      background: #f0f2f5;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      align-items: stretch;
+    }
+
+    /* Left Features Panel */
+    .left-panel {
+      flex: 1;
+      background: #e6f7ff; /* pastel blue */
+      color: #2f2f2f;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 40px;
+    }
+
+    .left-panel h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .left-panel ul {
+      list-style: none;
+    }
+
+    .left-panel ul li {
+      margin-bottom: 12px;
+      font-size: 16px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .left-panel ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #00b894;
+    }
+
+    /* Right Login Panel */
+    .right-panel {
+      width: 360px;
+      background: #d9f0f7; /* soft matching pastel */
+      color: #2f2f2f;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 32px;
+      box-shadow: -5px 0 25px rgba(0,0,0,0.05);
+      border-radius: 0;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: #2f2f2f;
+    }
+
+    .login-container label {
+      font-size: 14px;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      border: 1px solid #bbb;
+      outline: none;
+      font-size: 14px;
+      background: #f5f9fb; /* subtle lighter background for inputs */
+      color: #2f2f2f;
+    }
+
+    .login-container input::placeholder {
+      color: #888;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background: #00b894;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-bottom: 10px;
+    }
+
+    .login-container button:hover {
+      background: #009977;
+    }
+
+    .login-container .signup {
+      width: 100%;
+      padding: 12px;
+      background: #c1e4ef; /* slightly darker pastel button */
+      color: #2f2f2f;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-container .signup:hover {
+      background: #b0dae4;
+    }
+
+    .login-container .forgot {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .login-container .forgot a {
+      color: #00b894;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
       }
-      .window {
-        width: 600px;
-        height: 400px;
-        margin: 100px auto;
-        box-shadow: #000 0 0 10px;
-        background-color: rgba(253, 253, 253, 0.8);
-        border-radius: 10px;
-        overflow: hidden;
+      .left-panel {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
       }
-      .form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 90px;
-        gap: 5px;
+      .right-panel {
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        justify-content: flex-start;
       }
-        .login_title {
-            display: flex;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        window-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 20px;
-            
-        }
-        button {
-            width: 30%;
-            padding: 12px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .login_button {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .signup-link {
-            text-align: center;
-            margin-top: 20px;
-            color: #666;
-            font-size: 14px;
-        }
-        
-    </style>
-  </head>
+    }
+  </style>
+</head>
+<body>
 
-  <body>
-    <div id="window1" class="window">
-        <label for="title" class="login_title">Log In</label>
-      <div class="window-content">
-        <form action="/submit-form" method="post" class="form">
-        <label for="name" style="font-weight: bold;">User ID:</label><br>
-        <input type="text" id="user_id" name="user_id" placeholder="Enter User ID" required><br><br>
-
-        <label for="password" style="font-weight: bold;">Password:</label><br>
-        <input type="password" id="password" name="user_password" placeholder="Enter Password" required> <br><br>
-
-
-         </form>
-      </div>
-      <div class="login_button">
-        <button type="submit">Log In</button>
-      </div>
-      <div class="signup-link">
-            Don't have an account? <a href="#signup">Sign UP</a>
-        </div>
+  <!-- Main content -->
+  <div class="main">
+    <!-- Left Features Panel -->
+    <div class="left-panel">
+      <h1>Features</h1>
+      <ul>
+        <li>Track your income and expenses</li>
+        <li>Analyze spending habits</li>
+        <li>Secure login with encryption</li>
+        <li>Multi-platform support</li>
+        <li>Easy-to-use dashboard</li>
+      </ul>
+      <h1 style="margin-left: 45%">Money Management System</h1>
     </div>
-  </body>
+
+    <!-- Right Login Panel -->
+    <div class="right-panel">
+      <div class="login-container">
+        <h2>Sign In</h2>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password">
+        </div>
+
+        <button onclick="location.href='Dashboard.html';">Sign In</button>
+        <button class="signup" onclick="location.href='Signup.html';">Sign Up</button>
+
+        <div class="forgot">
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

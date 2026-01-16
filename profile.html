@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: black;
+        font-size: 20px;
+        font-family: Inter, Arial, sans-serif;
+        font-weight: 600;
+        line-height: 28px;
+        padding: 10px 30px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      "
+    >
+      Money Management System
+    </div>
+
+    <div
+      style="
+        width: 430px;
+        height: 700px;
+        position: absolute;
+        left: 40px;
+        top: 10px;
+
+        background: white;
+        overflow: hidden;
+        border-radius: 10px;
+
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+      "
+    >
+      <div
+        style="
+          width: 183px;
+          height: 32px;
+          left: 16px;
+          top: 20px;
+          position: absolute;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 12px;
+          display: inline-flex;
+        "
+      >
+        <div
+          style="
+            padding-left: 14px;
+            padding-right: 14px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background: var(--✦-_icon-icon-default, rgba(0, 0, 0, 0.9));
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            display: flex;
+          "
+        >
+          <div
+            style="
+              justify-content: center;
+              display: flex;
+              flex-direction: column;
+              color: white;
+              font-size: 14px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 19.6px;
+              word-wrap: break-word;
+            "
+          >
+            Main
+          </div>
+        </div>
+        <div
+          style="
+            padding-left: 14px;
+            padding-right: 14px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background: #f6f6f6;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            display: flex;
+          "
+        >
+          <div
+            style="
+              justify-content: center;
+              display: flex;
+              flex-direction: column;
+              color: black;
+              font-size: 14px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 19.6px;
+              word-wrap: break-word;
+            "
+          >
+            2nd
+          </div>
+        </div>
+        <div
+          style="
+            padding-left: 14px;
+            padding-right: 14px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background: #f6f6f6;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            display: flex;
+          "
+        >
+          <div
+            style="
+              justify-content: center;
+              display: flex;
+              flex-direction: column;
+              color: black;
+              font-size: 14px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 19.6px;
+              word-wrap: break-word;
+            "
+          >
+            3rd
+          </div>
+        </div>
+      </div>
+      <!--Top Tabs-->
+      <div
+        style="
+          width: 200px;
+          height: 63px;
+          left: 0px;
+          top: 0px;
+          position: absolute;
+        "
+      ></div>
+      <div
+        style="
+          width: 400px;
+          height: 135px;
+          left: 16px;
+          top: 75px;
+          position: absolute;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 20px;
+          display: flex;
+          flex-wrap: nowrap;
+        "
+      >
+        <!--Current Balance Box-->
+        <div
+          style="
+            width: 175px;
+            height: 100px;
+            padding: 16px;
+            background: white;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border-radius: 8px;
+            outline: 1px #e0e0e0 solid;
+            outline-offset: -1px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 8px;
+            display: inline-flex;
+          "
+        >
+          <div
+            style="
+              color: black;
+              font-size: 14px;
+              font-family: Inter;
+              font-weight: 600;
+              line-height: 19.6px;
+              word-wrap: break-word;
+            "
+          >
+            Current Balance
+          </div>
+          <div
+            style="
+              color: black;
+              font-size: 28px;
+              font-family: Inter;
+              font-weight: 600;
+              line-height: 33.6px;
+              word-wrap: break-word;
+            "
+          >
+            $45,678.90
+          </div>
+          <div
+            style="
+              color: #828282;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+            "
+          >
+            Remaining $700000
+          </div>
+        </div>
+        <!--Total Transactions Box-->
+        <div
+          style="
+            width: 200px;
+            height: 100px;
+            padding: 16px;
+            background: white;
+
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border-radius: 8px;
+            outline: 1px #e0e0e0 solid;
+            outline-offset: -1px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 8px;
+            display: inline-flex;
+          "
+        >
+          <div
+            style="
+              align-self: stretch;
+              color: black;
+              font-size: 14px;
+              font-family: Inter;
+              font-weight: 600;
+              line-height: 19.6px;
+              word-wrap: break-word;
+            "
+          >
+            Total Transactions
+          </div>
+          <div
+            style="
+              color: black;
+              font-size: 28px;
+              font-family: Inter;
+              font-weight: 600;
+              line-height: 33.6px;
+              word-wrap: break-word;
+            "
+          >
+            10,353
+          </div>
+          <div
+            style="
+              color: #828282;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+            "
+          >
+            +$200 From Previous Month
+          </div>
+        </div>
+      </div>
+      <!--Recents Box-->
+      <div
+        style="
+          width: 372px;
+          height: 300px;
+          padding: 16px;
+          left: 14px;
+          top: 340px;
+          position: absolute;
+          background: white;
+          overflow: hidden;
+          border-radius: 8px;
+          outline: 1px #e0e0e0 solid;
+          outline-offset: -1px;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 8px;
+          display: inline-flex;
+        "
+      >
+        <div
+          style="
+            width: 350px;
+            height: 280px;
+            padding: 10px;
+            left: 0px;
+            top: 5px;
+            position: relative;
+            background: white;
+            overflow: hidden;
+            border-radius: 8px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+            display: flex;
+          "
+        >
+          <div
+            style="
+              width: 64px;
+              height: 16px;
+              color: black;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+            "
+          >
+            Recents
+          </div>
+          <div
+            style="
+              width: 296px;
+              height: 21px;
+              color: black;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span>-- Potato Chips</span>
+            <span>$5.99</span>
+          </div>
+          <div
+            style="
+              width: 296px;
+              height: 21px;
+              color: black;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span>-- Coffee & Snacks</span>
+            <span>$12.50</span>
+          </div>
+          <div
+            style="
+              width: 296px;
+              height: 21px;
+              color: black;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span>-- Groceries</span>
+            <span>$45.30</span>
+          </div>
+          <div
+            style="
+              width: 296px;
+              height: 21px;
+              color: black;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span>-- Gas Station</span>
+            <span>$38.75</span>
+          </div>
+          <div
+            style="
+              width: 296px;
+              height: 21px;
+              color: black;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span>-- Restaurant Bill</span>
+            <span>$65.20</span>
+          </div>
+          <div
+            style="
+              width: 296px;
+              height: 21px;
+              color: black;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span>-- Movie Tickets</span>
+            <span>$28.00</span>
+          </div>
+          <div
+            style="
+              width: 296px;
+              height: 21px;
+              color: black;
+              font-size: 12px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 18px;
+              word-wrap: break-word;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span>-- Utilities Payment</span>
+            <span>$120.00</span>
+          </div>
+        </div>
+      </div>
+      <!--Quick Add Menu-->
+      <div
+        style="
+          width: 370px;
+          height: 80px;
+          padding: 16px;
+          left: 16px;
+          top: 220px;
+          position: absolute;
+          background: white;
+          overflow: hidden;
+          border-radius: 8px;
+          outline: 1px #e0e0e0 solid;
+          outline-offset: -1px;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 8px;
+          display: inline-flex;
+        "
+      >
+        <!--2-->
+        <div
+          data-has-icon-end="false"
+          data-has-icon-start="false"
+          data-size="Medium"
+          data-state="Default"
+          data-variant="Primary"
+          style="
+            width: 40px;
+            padding: 12px;
+            left: 80px;
+            top: 50px;
+            position: absolute;
+            background: var(--Background-Danger-Default, #ec221f);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border-radius: 8px;
+            outline: 1px var(--Border-Danger-Secondary, #c00f0c) solid;
+            outline-offset: -1px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            display: inline-flex;
+          "
+        >
+          <div
+            style="
+              color: var(--Text-Danger-On-Danger, #fee9e7);
+              font-size: 16px;
+              font-family: Inter;
+              font-weight: 400;
+              line-height: 16px;
+              word-wrap: break-word;
+            "
+          >
+            2
+          </div>
+        </div>
+        <div
+          data-has-icon-end="false"
+          data-has-icon-start="false"
+          data-size="Medium"
+          data-state="Default"
+          data-variant="Primary"
+          style="
+            width: 40px;
+            padding: 12px;
+            left: 220px;
+            top: 50px;
+            position: absolute;
+            background: var(--Background-Danger-Default, #ec221f);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border-radius: 8px;
+            outline: 1px var(--Border-Danger-Secondary, #c00f0c) solid;
+            outline-offset: -1px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            display: inline-flex;
+          "
+        >
+          <div
+            style="
+              color: var(--Text-Danger-On-Danger, #fee9e7);
+              font-size: 16px;
+              font-family: Inter;
+              font-weight: 400;
+              line-height: 16px;
+              word-wrap: break-word;
+            "
+          >
+            4
+          </div>
+        </div>
+
+        <div
+          data-has-icon-end="false"
+          data-has-icon-start="false"
+          data-size="Medium"
+          data-state="Default"
+          data-variant="Primary"
+          style="
+            width: 40px;
+            padding: 12px;
+            left: 290px;
+            top: 50px;
+            position: absolute;
+            background: var(--Background-Danger-Default, #000000);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border-radius: 8px;
+            outline: 1px var(--Border-Danger-Secondary, #000000) solid;
+            outline-offset: -1px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            display: inline-flex;
+          "
+        >
+          <div
+            style="
+              color: var(--Text-Danger-On-Danger, #fee9e7);
+              font-size: 16px;
+              font-family: Inter;
+              font-weight: 400;
+              line-height: 16px;
+              word-wrap: break-word;
+            "
+          >
+            5
+          </div>
+        </div>
+        <div
+          style="
+            width: 40px;
+            height: 20px;
+            padding: 10px;
+            left: 13px;
+            top: 50px;
+            position: absolute;
+            background: var(--Background-Brand-Default, #2c2c2c);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border-radius: 8px;
+            outline: 1px var(--Border-Brand-Default, #2c2c2c) solid;
+            outline-offset: -1px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            display: inline-flex;
+          "
+        >
+          <div
+            style="
+              color: var(--Text-Brand-On-Brand, #f5f5f5);
+              font-size: 16px;
+              font-family: Inter;
+              font-weight: 600;
+              line-height: 22.4px;
+              word-wrap: break-word;
+            "
+          >
+            1
+          </div>
+        </div>
+        <div
+          data-has-icon-end="false"
+          data-has-icon-start="false"
+          data-size="Medium"
+          data-state="Default"
+          data-variant="Primary"
+          style="
+            width: 40px;
+            padding: 12px;
+            left: 150px;
+            top: 50px;
+            position: absolute;
+            background: var(--Background-Brand-Default, #2c2c2c);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border-radius: 8px;
+            outline: 1px var(--Border-Brand-Default, #2c2c2c) solid;
+            outline-offset: -1px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            display: inline-flex;
+          "
+        >
+          <div
+            style="
+              color: var(--Text-Brand-On-Brand, #f5f5f5);
+              font-size: 16px;
+              font-family: Inter;
+              font-weight: 400;
+              line-height: 16px;
+              word-wrap: break-word;
+            "
+          >
+            3
+          </div>
+        </div>
+        <div
+          style="
+            width: 147px;
+            height: 39px;
+            left: 14px;
+            top: 16px;
+            position: absolute;
+            color: black;
+            font-size: 16px;
+            font-family: Inter;
+            font-weight: 700;
+            line-height: 16px;
+            word-wrap: break-word;
+          "
+        >
+          Quick Add Menu
+        </div>
+      </div>
+      <!--Plus Button-->
+    </div>
+    <div
+      data-show-focus-indicator="false"
+      data-size="Default"
+      data-state="Enabled"
+      data-style="Primary container"
+      style="
+        width: 70px;
+        height: 67px;
+        left: 51%;
+        transform: translateX(-50%);
+        bottom: 50px;
+        position: absolute;
+        background: white;
+        box-shadow: 1px 4px 50px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        border-radius: 16px;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+      "
+    >
+      <div
+        style="
+          width: 20px;
+          height: 20px;
+          left: 9px;
+          top: 7px;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div
+          style="
+            width: 50px;
+            height: 50px;
+            left: 2px;
+            top: 2px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 72 72"
+            width="70"
+            height="70"
+            fill="var(--Icon-Default-Default, #1e1e1e)"
+          >
+            <path
+              d="M 36 12 C 22.745 12 12 22.745 12 36 C 12 49.255 22.745 60 36 60 C 49.255 60 60 49.255 60 36 C 60 22.745 49.255 12 36 12 z 
+         M 36 20 C 44.837 20 52 27.163 52 36 C 52 44.837 44.837 52 36 52 C 27.163 52 20 44.837 20 36 C 20 27.163 27.163 20 36 20 z 
+         M 36 25 C 34.343 25 33 26.343 33 28 L 33 33 L 28 33 C 26.343 33 25 34.343 25 36 C 25 37.657 26.343 39 28 39 L 33 39 L 33 44 C 33 45.657 34.343 47 36 47 C 37.657 47 39 45.657 39 44 L 39 39 L 44 39 C 45.657 39 47 37.657 47 36 C 47 34.343 45.657 33 44 33 L 39 33 L 39 28 C 39 26.343 37.657 25 36 25 z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+<!-- PROFILE CARD -->
+    <div
+      style="
+        width: 400px;
+        height: 650px;
+        position: absolute;
+        left: 1075px;
+        padding-top: 30px;
+        background: white;
+        overflow: hidden;
+        border-radius: 10px;
+
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+      "
+    >
+      
+      <div
+         class="profile-screen">
+  <style>
+    .profile-screen {
+      max-width: 420px;
+      margin: auto;
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #111;
+    }
+
+
+    .menu {
+      font-size: 22px;
+    }
+
+    .title {
+      font-weight: 600;
+    }
+
+    .header img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+
+    /* Profile info */
+    .profile {
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 4px solid #f1f1f1;
+      margin-bottom: 12px;
+    }
+
+    .name {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .email {
+      color: #888;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    /* Form */
+    .form {
+      padding: 0 20px;
+    }
+
+    .field {
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 18px;
+      padding-bottom: 6px;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      padding: 8px 0;
+      background: transparent;
+    }
+
+    .phone {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .flag {
+      font-size: 18px;
+    }
+
+    /* Button */
+    .btn {
+      margin: 30px 20px;
+      background: #0b00c7;
+      color: #fff;
+      border: none;
+      width: calc(100% - 40px);
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Bottom nav */
+    .bottom-nav {
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid #eee;
+      padding: 10px 0;
+      margin-top: auto;
+    }
+
+    .nav-item {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+    }
+
+    .nav-item.active {
+      color: #111;
+      font-weight: 600;
+    }
+  </style>
+
+
+<!-- Back Button -->
+<button
+  onclick="location.href='Dashboard.html';"
+  style="
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #111;
+  "
+>
+    &#8592;
+</button>
+
+
+
+  <!-- Profile -->
+  <div class="profile">
+    <img class="avatar" src="profile_image.jpg" alt="avatar">
+    <div class="name">Rafiul Islam</div>
+    <div class="email">rafiulrafi55@gmail.com</div>
+  </div>
+
+  <!-- Form -->
+  <div class="form">
+    <div class="field">
+      <input type="text" placeholder="What’s your first name?" />
+    </div>
+
+    <div class="field">
+      <input type="text" placeholder="And your last name?" />
+    </div>
+
+    <div class="field phone">
+      
+      <input type="tel" placeholder="Phone number" />
+    </div>
+
+    <div class="field">
+      <select>
+        <option>Select your gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <input type="date" />
+    </div>
+  </div>
+
+  <!-- Button -->
+  <button class="btn" onclick="location.href='Dashboard.html';">Update Profile</button>
+
+  
+</div>
+
+    </div>
+
+    <!-- Charted Container -->
+    <div style="text-align: center">
+      <div
+        style="
+          width: 500px;
+          height: 300px;
+          background: #fff;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          margin-bottom: 50px;
+          margin-left: 25px;
+        "
+      >
+        <h2 style="color: #333; font-size: 16px; margin: 0 0 0 0">
+          Monthly Income vs Expense
+        </h2>
+
+        <div
+          style="
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+          "
+        >
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <div
+              style="
+                width: 30px;
+                height: 108px;
+                background-color: #4caf50;
+                border-radius: 5px;
+                margin-bottom: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">180</span>
+            </div>
+            <div
+              style="
+                width: 30px;
+                height: 72px;
+                background-color: #f44336;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">120</span>
+            </div>
+            <span style="color: #555; font-size: 10px; margin-top: 5px"
+              >Jan</span
+            >
+          </div>
+
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <div
+              style="
+                width: 30px;
+                height: 120px;
+                background-color: #4caf50;
+                border-radius: 5px;
+                margin-bottom: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">200</span>
+            </div>
+            <div
+              style="
+                width: 30px;
+                height: 96px;
+                background-color: #f44336;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">160</span>
+            </div>
+            <span style="color: #555; font-size: 10px; margin-top: 5px"
+              >Feb</span
+            >
+          </div>
+
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <div
+              style="
+                width: 30px;
+                height: 90px;
+                background-color: #4caf50;
+                border-radius: 5px;
+                margin-bottom: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">150</span>
+            </div>
+            <div
+              style="
+                width: 30px;
+                height: 60px;
+                background-color: #f44336;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">100</span>
+            </div>
+            <span style="color: #555; font-size: 10px; margin-top: 5px"
+              >Mar</span
+            >
+          </div>
+
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <div
+              style="
+                width: 30px;
+                height: 132px;
+                background-color: #4caf50;
+                border-radius: 5px;
+                margin-bottom: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">220</span>
+            </div>
+            <div
+              style="
+                width: 30px;
+                height: 108px;
+                background-color: #f44336;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">180</span>
+            </div>
+            <span style="color: #555; font-size: 10px; margin-top: 5px"
+              >Apr</span
+            >
+          </div>
+
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <div
+              style="
+                width: 30px;
+                height: 150px;
+                background-color: #4caf50;
+                border-radius: 5px;
+                margin-bottom: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">250</span>
+            </div>
+            <div
+              style="
+                width: 30px;
+                height: 120px;
+                background-color: #f44336;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+              "
+            >
+              <span style="color: #fff; font-size: 10px">200</span>
+            </div>
+            <span style="color: #555; font-size: 10px; margin-top: 5px"
+              >May</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
